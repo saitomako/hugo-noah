@@ -2,10 +2,17 @@
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
   {{- partial "head.html" . -}}
   <body>
-    {{- partial "header.html" . -}}
-    <main>
-      {{- block "main" .}}{{- end }}
-    </main>
-    {{- partial "footer.html" . -}}
+    <div id="wrap">
+      {{- partial "header.html" . -}}
+      {{ if .IsHome }}
+        {{- partial "banner.html" . -}}
+      {{ end }}
+      <div id="main">
+        <div id="container" class="innerBox">
+          {{- block "main" .}}{{- end }}
+        </div>
+      </div>
+      {{- partial "footer.html" . -}}
+    </div><!--#wrap-->
   </body>
 </html>

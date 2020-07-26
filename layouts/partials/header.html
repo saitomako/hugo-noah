@@ -1,1 +1,35 @@
-header.html
+<div id="headerTop">
+  <div class="innerBox">
+    <div id="site-description">
+      {{ .Site.Params.description }}
+    </div>
+  </div>
+</div>
+<div id="header">
+  <div id="headerInner" class="innerBox">
+    <h1 id="site-title">
+      <a href="{{ .Site.BaseURL }}" alt="{{ .Title }}" rel="home">
+        <img src="{{ "images/logo-sitename2.png" | absURL }}" alt="{{ .Title }}">
+      </a>
+    </h1>
+    <div id="gMenu">
+      <div id="gMenuInner" class="innerBox">
+        <h3 class="assistive-text" onclick="showHide('header';)"><span>MENU</span></h3>
+        <div class="skip-link screen-reader-text">
+          <a href="#content" title="メニューを飛ばす">メニューを飛ばす</a>
+        </div>
+        <div class="headMainMenu">
+          <div class="menu-main-menu-container">
+            <ul id="menu-main-menu" class="menu">
+              {{ range $index, $element := (.Site.Menus.nav) }}
+              <li id="menu-item-{{ .URL }}" class="menu-item">
+                <a href="{{ .URL | absURL }}"><strong>{{ .Name }}</strong><span>{{ .Identifier }}</span></a>
+              </li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

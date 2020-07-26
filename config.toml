@@ -1,3 +1,45 @@
 baseURL = "https://hugo.zxfo.com/noah"
 languageCode = "ja"
 title = "NPO法人 ノア"
+
+[menu]
+  # Navbar Menus
+  [[menu.nav]]
+    name    = "ホーム"
+    identifier    = "HOME"
+    url  = ""
+    weight  = 1
+  [[menu.nav]]
+    name    = "NPO法人ノアとは"
+    identifier    = "ABOUT"
+    url  = "about"
+    weight  = 2
+  [[menu.nav]]
+    name    = "ノア通信"
+    identifier    = "NOAH NEWS"
+    url  = "noah-news"
+    weight  = 3
+    post    = "NEW"
+  [[menu.nav]]
+    name    = "赤とんぼ調査報告"
+    identifier    = "AKATONBO"
+    url  = "report-akatonbo"
+    weight  = 4
+  [[menu.nav]]
+    name    = "事業報告"
+    identifier    = "REPORT"
+    url  = "report"
+    weight  = 5
+  [[menu.nav]]
+    name    = "ブログ"
+    identifier    = "BLOG"
+    url  = "blog"
+    weight  = 6
+  [[menu.nav]]
+    name    = "お問い合わせ"
+    identifier    = "CONTACT"
+    url  = "contact"
+    weight  = 7
+
+[params]
+description = "埼玉県寄居町で活動している非営利の市民団体です。自然の恵みを分かち合い、相互に支えあう地域づくりをめざすのが目的です。"
